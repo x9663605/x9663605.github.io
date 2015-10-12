@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Minimal by Steve Smith</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+<header>
+	<h1>x9663605</h1>
+	<a href="https://x9663605.github.io/index.html">home</a><br>
+	<a href="https://x9663605.github.io/exercises.html">python exercises</a><br>
+	<a href="https://github.com/x9663605">github page</a><br>
+
+
+	</header>
+        <section>
+        <h1>python exercises</h1>
+        <p><em><a href="https://github.com/zhiwehu/Python-programming-exercises">source</a></em></p>
+<li>description</li >
+<pre><code>#!/usr/bin/env python
+code
+</code></pre>
+<li>2000<=i<=3200, %7==0, %5!=0, in one line</li >
+<pre><code>#!/usr/bin/env python
+l = []
+for i in range(2000,3201):
+    if i%7==0 and i%5!=0:
+        l.append(str(i))
+print " ".join(l)
+</code></pre>
+<li>factorial of given numbers, in one line</li >
+<pre><code>#!/usr/bin/env python
+x = [int(i) for i in raw_input().split(" ")]
+l = []
+for i in x:
+    c = i
+    while c > 1:
+        c -= 1
+        i *= c
+    l.append(str(i))
+print " ".join(l)</code></pre>
+<li>dictionary of n-elements (i,i*i), in one line</li >
+<pre><code>#!/usr/bin/env python
+x = int(raw_input())
+d = {}
+for i in range(1, x+1):
+    d[i] = i*i
+print d</code></pre>
+<li>int square root of (2*50*x)/30, in one line</li >
+<pre><code>#!/usr/bin/env python
+import math
+x = [int(i) for i in raw_input().split(" ")]
+l = []
+for i in x:
+    l.append(str(int(math.sqrt(2*50*i/30))))
+print " ".join(l)
+</code></pre>
+<li>sorting, in one line</li >
+<pre><code>#!/usr/bin/env python
+l = [i for i in raw_input().split(" ")]
+print " ".join(sorted(l))
+</code></pre>
+<li>all characters capitalized, accepts sequence of lines</li >
+<pre><code>#!/usr/bin/env python
+l = []
+while True:
+    x = raw_input()
+    if x:
+        l.append(x.upper())
+    else:
+        break
+for i in l:
+    print i</code></pre>
+<li>sorting and removing duplicates, in one line</li >
+<pre><code>#!/usr/bin/env python
+x = [i for i in raw_input().split(" ")]
+l = []
+for i in x:
+    if i in l:
+        continue
+    l.append(i)
+print " ".join(sorted(l))
+</code></pre>
+<li>1000<=i<=3000, all digits are even, in one line</li >
+<pre><code>#!/usr/bin/env python
+l = []
+for i in range(1000,3001):
+    c = 0
+    for j in str(i):
+        if int(j)%2==0:
+            c+=1
+    if c==4:
+        l.append(str(i))
+print " ".join(l)
+</code></pre>
+<li>calculate the number of letters and digits</li >
+<pre><code>#!/usr/bin/env python
+x = raw_input()
+d = {"d":0, "l":0}
+for i in x:
+    if i.isdigit():
+        d["d"]+=1
+    elif i.isalpha():
+        d["l"]+=1
+print "digits:",d["d"],"letters:",d["l"]
+</code></pre>
+<li>odd numbers filter</li >
+<pre><code>#!/usr/bin/env python
+l = [i for i in raw_input().split(" ") if int(i)%2!=0]
+print " ".join(l)
+</code></pre>
+<li>deposit/withdraw (D 100/W 100)</li >
+<pre><code>#!/usr/bin/env python
+b = 0
+while True:
+    x = raw_input()
+    if x:
+        x = x.split(" ")
+        if x[0]=="W":
+            b -= int(x[1])
+        elif x[0]=="D":
+            b += int(x[1])
+        else:
+            pass
+    else:
+        print b
+        break
+</code></pre>
+<li>description</li >
+<pre><code>#!/usr/bin/env python
+code
+</code></pre>
+<li>description</li >
+<pre><code>#!/usr/bin/env python
+code
+</code></pre>
+<li>description</li >
+<pre><code>#!/usr/bin/env python
+code
+</code></pre>
+
+
+      </section>
+      <footer>
+        <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist (Steve Smith)</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
