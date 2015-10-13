@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Minimal by Steve Smith</title>
-    
+    <title>x9663605 homepage</title>
+
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -14,17 +14,15 @@
   </head>
   <body>
     <div class="wrapper">
-<header>
-	<h1>x9663605</h1>
-	<a href="https://x9663605.github.io/index.html">home</a><br>
-	<a href="https://x9663605.github.io/exercises.html">python exercises</a><br>
-	<a href="https://github.com/x9663605">github page</a><br>
-
-
-	</header>
-        <section>
-        <h1>python exercises</h1>
-        <p><em><a href="https://github.com/zhiwehu/Python-programming-exercises">source</a></em></p>
+      <header>
+        <h1>x9663605</h1>
+        <p><a href="https://github.com/x9663605">github page</a></p>
+        <a href="https://x9663605.github.io">home</a><br>
+        <a href="https://x9663605.github.io/exercises">python exercises</a><br>
+      </header>
+      <section>
+      <h1>python exercises</h1>
+      <p><em><a href="https://github.com/zhiwehu/Python-programming-exercises">source</a></em></p>
 <li>description</li >
 <pre><code>#!/usr/bin/env python
 code
@@ -135,9 +133,41 @@ while True:
         print b
         break
 </code></pre>
-<li>description</li >
+<li>password checker, 1 char a-z/A-Z/0-9/$#@</li >
 <pre><code>#!/usr/bin/env python
-code
+import re
+l = []
+x = raw_input().split(" ")
+for i in x:
+    if len(i)>=6 or len(i)<=12:
+        if (re.search("[a-z]",i) and re.search("[A-Z]",i) and re.search("[0-9]",i)
+            and re.search("[$#@]",i) and not re.search("\s",i)):
+            l.append(i)
+print " ".join(l)
+</code></pre>
+<li>name/age/height, list of tuples</li >
+<pre><code>#!/usr/bin/env python
+from operator import itemgetter
+t = ()
+l = []
+while True:
+    t = raw_input()
+    if t:
+        l.append(t.split(","))
+    else:
+        break
+print sorted(l,key=itemgetter(0,1,2))
+</code></pre>
+<li>divisible by 7 to n</li >
+<pre><code>#!/usr/bin/env python
+def generatorbyseven(x):
+    l = []
+    for i in range(0,x+1):
+        if i%7 == 0:
+            l.append(str(i))
+    return l
+x = int(raw_input())
+print " ".join(generatorbyseven(x))
 </code></pre>
 <li>description</li >
 <pre><code>#!/usr/bin/env python
@@ -147,8 +177,14 @@ code
 <pre><code>#!/usr/bin/env python
 code
 </code></pre>
-
-
+<li>description</li >
+<pre><code>#!/usr/bin/env python
+code
+</code></pre>
+<li>description</li >
+<pre><code>#!/usr/bin/env python
+code
+</code></pre>
       </section>
       <footer>
         <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist (Steve Smith)</a></small></p>
