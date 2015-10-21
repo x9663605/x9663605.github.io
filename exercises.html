@@ -17,8 +17,9 @@
       <header>
         <h1>x9663605</h1>
         <a href="https://x9663605.github.io">home</a><br>
-        <a href="https://x9663605.github.io/exercises">python exercises</a><br>
         <a href="https://x9663605.github.io/music">music</a><br>
+        <a href="https://x9663605.github.io/exercises">python exercises</a><br>
+        <a href="https://x9663605.github.io/python">python console</a><br>
       </header>
       <section>
       <p><em><a href="https://github.com/zhiwehu/Python-programming-exercises">source</a></em></p>
@@ -167,6 +168,53 @@ def generatorbyseven(x):
     return l
 x = int(raw_input())
 print " ".join(generatorbyseven(x))
+</code></pre>
+<li>x/y movement, right/left/up/down</li >
+<pre><code>#!/usr/bin/env python
+pos = [0,0]
+while True:
+    x = raw_input()
+    if x:
+        x = x.split(" ")
+        direction = x[0]
+        steps = int(x[1])
+        if direction == "UP":
+            pos[1]+=steps
+        elif direction == "DOWN":
+            pos[1]-=steps
+        elif direction == "RIGHT":
+            pos[0]+=steps
+        elif direction == "LEFT":
+            pos[0]-=steps
+        else:
+            pass
+    else:
+        break
+print pos
+</code></pre>
+<li>password generator</li >
+<pre><code>#!/usr/bin/env python
+import random, string
+x = int(raw_input())
+password = ""
+for i in range(0,x):
+    password+=random.SystemRandom().choice(string.ascii_letters+string.digits)
+print password
+</code></pre>
+<li>sorting&counting</li >
+<pre><code>#!/usr/bin/env python
+d = {}
+x = raw_input()
+for w in x.split(" "):
+    d[w] = d.get(w,0)+1
+k = d.keys()
+k.sort()
+for w in k:
+    print w+":",d[w]
+</code></pre>
+<li>description</li >
+<pre><code>#!/usr/bin/env python
+code
 </code></pre>
 <li>description</li >
 <pre><code>#!/usr/bin/env python
