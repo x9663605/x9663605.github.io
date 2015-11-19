@@ -28,27 +28,27 @@
       </header>
       <section>
         <h2>UKE Reader</h2>
-        <em><a href="https://github.com/x9663605/uke_reader">github page</a></em> /
-        <em><a href="https://github.com/x9663605/uke_reader/zipball/master">download zip</a></em> /
-        <em><a href="https://github.com/x9663605/uke_reader/tarball/master">download tar</a></em><br>
-        <em><a href="https://github.com/x9663605/uke_reader_pl">(instrukcja po polsku)</a></em><br><br>
-        QGIS plugin reading *.xlsx file and creating temporary vector layer (able to save).<br>
-        Input is degree coordinates in 4326, output is decimal coordinates in 4326.<br><br>
-        Instruction of installing new plugins in QGIS (Windows):<br>
+        <em><a href="https://github.com/x9663605/uke_reader">strona github</a></em> /
+        <em><a href="https://github.com/x9663605/uke_reader/zipball/master">pobierz zip</a></em> /
+        <em><a href="https://github.com/x9663605/uke_reader/tarball/master">pobierz tar</a></em><br>
+        <em><a href="https://github.com/x9663605/uke_reader">(manual in english)</a></em><br><br>
+        Wtyczka do programu QGIS wczytująca pliki *.xlsx i tworząca tymczasową wektorową warstwę (możliwą do zapisu).<br>
+        Współrzędne wejściowe muszą być w układzie WGS84 (EPSG:4326). Wynikiem są punkty wraz z tabelą atrybutów.<br><br>
+        Istrukcja instalacji wtyczki w QGIS-ie (Windows):<br>
         <ol>
-          <li>Paste extracted plugin in C:\Users\<b>user</b>\.qgis2\python\plugins\uke_reader</li>
-          <li>Turn on in QGIS Plugin Manager</li>
+          <li>Wklej rozpakowaną wtyczkę do C:\Użytkownicy\<b>użytkownik</b>\.qgis2\python\plugins\uke_reader</li>
+          <li>Włącz wtyczkę w Plugin Manager w QGIS-ie (Wtyczki -> Zarządzaj wtyczkami...)</li>
         </ol>
-        Instruction of UKE Reader <a href="https://www.uke.gov.pl/pozwolenia-radiowe-dla-stacji-gsm-umts-lte-oraz-cdma-4145">(sample data)</a>:
+        Instrukcja wtyczki UKE Reader <a href="https://www.uke.gov.pl/pozwolenia-radiowe-dla-stacji-gsm-umts-lte-oraz-cdma-4145">(przykładowe dane)</a>:
         <ol>
-          <li>Open the plugin <b> (Plugins -> UKE Reader)</b></li>
-          <li>Choose <b>*.xlsx</b> file in "Input"</li>
-          <li>Type the letter of column with X coordinate <b>(latitude)</b> in "X column".</li>
-          <li>Type the letter of column with Y coordinate <b>(longitude)</b> in "Y column".</li>
-          <li>Enter which row has <b>first</b> coordinates in "Start row".</li>
+          <li>Otwórz wtyczkę <b>(Wtyczki -> UKE Reader)</b></li>
+          <li>Wybierz plik <b>*.xlsx</b> w polu "Arkusz"</li>
+          <li>Wpisz literę kolumny ze współrzędną X <b>(szerokość geograficzna)</b> w "Kolumna X".</li>
+          <li>Wpisz literę kolumny ze współrzędną Y <b>(długość geograficzna)</b> w "Kolumna Y".</li>
+          <li>Wpisz <b>pierwszy</b> wiersz zawierające dane (pomiń nazwy kolumn) w "Numer pierwszego wiersza".</li>
         </ol>
         <hr/>
-        In plugin has been used following modules:
+        We wtyczce zostały użyte poniższe biblioteki:
         <li><a href="http://qgis.org/api/group__core.html">qgis.core</a> (QGIS support)</li>
         <li><a href="http://www.qt.io/download-open-source/">PyQt4</a> (QT Creator for GUI support)</li>
         <li><a href="https://openpyxl.readthedocs.org/en/latest/">openpyxl</a> (excel files support)</li>
