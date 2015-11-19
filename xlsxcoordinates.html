@@ -22,36 +22,30 @@
   <body>
     <div class="wrapper">
       <header>
-        <a href="https://x9663605.github.io">home</a><br>
-        <a href="https://x9663605.github.io/exercises">python exercises</a><br>
-        <a href="https://x9663605.github.io/regex">python regex</a><br>
-        <a href="https://x9663605.github.io/python">python console</a><br><br>
+        <a href="https://x9663605.github.io">home</a><br><br>
         <b>projects</b><br>
-        <a href="https://x9663605.github.io/xlsxcoordinates">xlsx coordinates</a>
+        <a href="https://x9663605.github.io/uke_reader">uke reader</a>
       </header>
       <section>
-        <h2>XLSX Coordinates</h2>
-        <em><a href="https://github.com/x9663605/xlsx_coordinates">github page</a></em> /
-        <em><a href="https://github.com/x9663605/xlsx_coordinates/zipball/master">download zip</a></em> /
-        <em><a href="https://github.com/x9663605/xlsx_coordinates/tarball/master">download tar</a></em><br>
-        QGIS plugin reading *.xlsx files and creating temporary vector layer (able to save).<br>
+        <h2>UKE Reader</h2>
+        <em><a href="https://github.com/x9663605/uke_reader">github page</a></em> /
+        <em><a href="https://github.com/x9663605/uke_reader/zipball/master">download zip</a></em> /
+        <em><a href="https://github.com/x9663605/uke_reader/tarball/master">download tar</a></em><br>
+        QGIS plugin reading *.xlsx file and creating temporary vector layer (able to save).<br>
         Input is degree coordinates in 4326, output is decimal coordinates in 4326.<br><br>
         Instruction of installing new plugins in QGIS (Windows):<br>
         <ol>
-          <li>Paste extracted plugin in C:\Users\<b>user</b>\.qgis2\python\plugins\xlsx_coordinates</li>
+          <li>Paste extracted plugin in C:\Users\<b>user</b>\.qgis2\python\plugins\uke_reader</li>
           <li>Turn on in QGIS Plugin Manager</li>
         </ol>
-        Instruction of XLSX Coordinates <a href="https://www.uke.gov.pl/pozwolenia-radiowe-dla-stacji-gsm-umts-lte-oraz-cdma-4145">(sample data)</a>:
+        Instruction of UKE Reader <a href="https://www.uke.gov.pl/pozwolenia-radiowe-dla-stacji-gsm-umts-lte-oraz-cdma-4145">(sample data)</a>:
         <ol>
-          <li>Open the plugin <b> (Plugins>XLSX Coordinates)</b></li>
-          <li>Choose <b>*.xlsx</b> file in "Select input"</li>
-          <li>Type the letter of column with X coordinate <b>(latitude)</b> in "Select X column".</li>
-          <li>Type the letter of column with Y coordinate <b>(longitude)</b> in "Select Y column".</li>
-          <li>Enter which row has <b>first</b> coordinates in "Select start row".</li>
-          <li>Enter the accuracy of coordinates <b>(default=10)</b> in "Select accuracy".</li>
+          <li>Open the plugin <b> (Plugins -> UKE Reader)</b></li>
+          <li>Choose <b>*.xlsx</b> file in "Input"</li>
+          <li>Type the letter of column with X coordinate <b>(latitude)</b> in "X column".</li>
+          <li>Type the letter of column with Y coordinate <b>(longitude)</b> in "Y column".</li>
+          <li>Enter which row has <b>first</b> coordinates in "Start row".</li>
         </ol>
-        <img src="http://i.imgur.com/KmSN6RD.png"></img><br>
-        <img src="http://imgur.com/kfZcN7h.png"></img>
         <hr/>
         In plugin has been used following modules:
         <li><a href="http://qgis.org/api/group__core.html">qgis.core</a> (QGIS support)</li>
